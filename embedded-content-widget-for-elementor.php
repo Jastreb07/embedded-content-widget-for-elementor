@@ -9,7 +9,7 @@
  * Author URI:  https://herweck.de
  * GitHub Plugin URI: Jastreb07/embedded-content-widget-for-elementor
  * Primary Branch: main
- * Release Asset: true
+ * Release Asset: false
  */
 
 // Elementor Widget
