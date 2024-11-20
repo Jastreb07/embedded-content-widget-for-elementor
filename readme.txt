@@ -1,5 +1,5 @@
 === Embedded content widget for Elementor ===
-Contributors: jastreb
+Contributors: Jastreb
 Tags: elementor, pro, embedded, content
 Requires at least: 5.0
 Tested up to: 6.4.3

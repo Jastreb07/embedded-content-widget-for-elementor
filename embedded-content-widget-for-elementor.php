@@ -1,11 +1,12 @@
 <?php
 /**
  * Plugin Name: Embedded content widget for Elementor
+ * Plugin URI: https://github.com/Jastreb07/embedded-content-widget-for-elementor
  * Description: Simple Embedded Content from other websites.
  * Version:     1.0.1
  * Author:      Vitalij Dell
  * Author URI:  https://herweck.de
- * Text Domain: embedded-content-widget-for-elementor
+ * GitHub Plugin URI: Jastreb07/embedded-content-widget-for-elementor
  */
 
 // Elementor Widget
