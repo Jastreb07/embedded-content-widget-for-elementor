@@ -66,24 +66,13 @@ class Elementor_Embedded_Content_Widget extends \Elementor\Widget_Base {
                 if (event.origin === new URL(expectedOrigin).origin) {
                     if (event.data?.fullUrl === expectedOrigin) {
                         const scrollHeight = event.data?.scrollHeight;
-                        //const newLink = event.data?.newLink;
 
                         if (scrollHeight) {
                             embeddedIframe.style.height = (scrollHeight + 40) + 'px';
-                            //console.log('My iframe height', embeddedIframe.style.height)
                         } else {
                             console.error('scrollHeight not found in message data.');
                         }
-
-                        i/*f (newLink) {
-                            //window.location.href = newLink;
-                            console.log('My new nav link', newLink)
-                        } else {
-                            console.error('newLink not found in message data.');
-                        }*/
                     }
-                } else {
-                    //console.warn('Received message from unexpected origin:', event.origin);
                 }
             });
         </script>
