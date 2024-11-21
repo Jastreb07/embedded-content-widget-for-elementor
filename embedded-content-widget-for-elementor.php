@@ -3,7 +3,7 @@
  * Plugin Name: Embedded content widget for Elementor
  * Plugin URI: https://github.com/Jastreb07/embedded-content-widget-for-elementor
  * Description: Simple Embedded Content from other websites.
- * Version:     1.0.4
+ * Version:     1.0.3
  * License:     GPL3
  * Author:      Vitalij Dell
  * Author URI:  https://herweck.de

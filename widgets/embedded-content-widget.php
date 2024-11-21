@@ -36,7 +36,7 @@ class Elementor_Embedded_Content_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Fetch-Url', 'embedded-content-widget-for-elementor' ),
                 'description' => esc_html__( 'Your fetch-url must enable CORS allow. You can install WordPress plugin like "Enable CORS" on the fetch-url side.', 'embedded-content-widget-for-elementor' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'https://my-wordpress.com/post-name-or-id', 'embedded-content-widget-for-elementor' ),
+                'default' => esc_html__( 'https://google.com', 'embedded-content-widget-for-elementor' ),
             ]
         );
 
@@ -45,9 +45,10 @@ class Elementor_Embedded_Content_Widget extends \Elementor\Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
+        $unique_id = uniqid('embedded-content-iframe-');
         ?>
         <iframe
-                id="embedded-content-iframe"
+                id="<?php echo esc_attr($unique_id); ?>"
                 sandbox="allow-scripts allow-popups allow-same-origin"
                 class="iframe"
                 frameborder="0"
@@ -58,9 +59,8 @@ class Elementor_Embedded_Content_Widget extends \Elementor\Widget_Base {
                 style="border: none; overflow: hidden; display: block;"
         ></iframe>
         <script>
-            const embeddedIframe = document.getElementById('embedded-content-iframe');
-
             window.addEventListener('message', event => {
+                const embeddedIframe = document.getElementById('<?php echo esc_js($unique_id); ?>');
                 const expectedOrigin = '<?php echo esc_url( $settings['url'] ); ?>';
 
                 if (event.origin === new URL(expectedOrigin).origin) {
